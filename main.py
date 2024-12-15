@@ -6,6 +6,7 @@ import logging
 import json
 from datetime import datetime, timezone
 from twikit import Client as TwitterClient
+import os
 
 # Configuration du logging
 logging.basicConfig(level=logging.DEBUG, 
@@ -214,4 +215,4 @@ async def on_error(event, *args, **kwargs):
     logger.exception(f"Erreur sur l'événement {event}")
 
 logger.info("Démarrage du bot")
-client.run(TOKEN)
+client.run(os.getenv('TOKEN'))
