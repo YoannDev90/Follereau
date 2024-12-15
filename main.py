@@ -214,4 +214,4 @@ async def on_error(event, *args, **kwargs):
     logger.exception(f"Erreur sur l'événement {event}")
 
 logger.info("Démarrage du bot")
-client.run("TOKEN")
+client.run(TOKEN)
